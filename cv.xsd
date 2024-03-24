@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+
+    <xsd:element name="cv" type="cvType"/>
+
+    <xsd:complexType name="cvType">
+        <xsd:sequence>
+            <xsd:element name="head" type="informations_personnelles_type"/>
+            <xsd:element name="body" type="formations_type"/>
+            <xsd:element name="body" type="experience_professionnelle_type"/>
+            <xsd:element name="body" type="competences"/>
+            <xsd:element name="body" type="langues"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="informations_personnelles_type">
+        <xsd:sequence>
+            <xsd:element name="nom" type="xsd:string"/>
+            <xsd:element name="prenom" type="xsd:string"/>
+            <xsd:element name="adresse" type="addresse_type"/>
+            <xsd:element name="email" type="email_type" />
+            <xsd:element name="telephone" type="telephone_type"/>
+            <xsd:element name="permis" type="permis_type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="addresse_type">
+        <xsd:sequence>
+            <xsd:element name="rue" type="xsd:string"/>
+            <xsd:element name="ville" type="xsd:string"/>
+            <xsd:element name="code_postal" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="email_type">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[a-zA-Z0-9]['@'][a-zA-Z0-9]['.'][a-z]}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="telephone_type">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{10}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="permis_type">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="A|B"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="formations_type">
+        <xsd:sequence>
+            <xsd:element name="formation" type="formation_type"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="formation_type">
+        <xsd:sequence>
+            <xsd:element name="diplome" type="xsd:string"/>
+            <xsd:element name="etablissement" type="xsd:string"/>
+            <xsd:element name="periode" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

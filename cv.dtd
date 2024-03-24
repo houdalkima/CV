@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv[
+        <!ELEMENT cv (informations_personnelles, formations+, experience_professionnelle, competences, langues)>
+        <!ELEMENT informations_personnelles (prenom, nom, adresse, email, telephone, permis)>
+        <!ATTLIST informations_personnelles
+                prenom CDATA #REQUIRED
+                nom CDATA #REQUIRED
+                adresse CDATA #REQUIRED
+                email CDATA #REQUIRED
+                telephone CDATA #REQUIRED
+                permis CDATA #IMPLIED>
+
+        <!ATTLIST adresse
+                rue CDATA #REQUIRED
+                ville CDATA #REQUIRED
+                code_postal CDATA #REQUIRED>
+
+
+        <!ELEMENT formation (diplome, etablissement, periode)>
+
+        <!ELEMENT diplome (#PCDATA)>
+        <!ELEMENT etablissement (#PCDATA)>
+        <!ELEMENT periode (#PCDATA)>
+
+        <!ELEMENT experience_professionnelle (emploi+)>
+        <!ELEMENT emploi (poste, entreprise, periode, responsabilites)>
+        <!ELEMENT poste (#PCDATA)>
+        <!ELEMENT entreprise (#PCDATA)>
+        <!ELEMENT periode (#PCDATA)>
+        <!ELEMENT responsabilites (item+)>
+        <!ELEMENT item (#PCDATA)>
+
+        <!ELEMENT competences (informatique, personnelles)>
+        <!ELEMENT informatique (outils_integration_et_deploiement_continu, langages_et_frameworks, gestion_de_projet)>
+        <!ELEMENT outils_integration_et_deploiement_continu (outil+)>
+        <!ELEMENT outil (#PCDATA)>
+        <!ELEMENT langages_et_frameworks (langage+)>
+        <!ELEMENT langage (#PCDATA)>
+        <!ELEMENT gestion_de_projet (#PCDATA)>
+        <!ELEMENT personnelles (competence+)>
+        <!ELEMENT competence (#PCDATA)>
+
+        <!ELEMENT langues (langue+)>
+        <!ELEMENT langue (nom, niveau)>
+        <!ELEMENT nom (#PCDATA)>
+        <!ELEMENT niveau (#PCDATA)>
+        <!ENTITY uga "Université Grenoble Alpes">
+        ]>
+
+
+        <!-- + à la suite d'un nom d'élément signifie que l'élément <langues> par ex doit contenir au moins un élément <langue>, mais il peut contenir plusieurs éléments <langue>.
+             * à la suite d'un nom d'élément signifie que l'élément peut contenir 0 à plusieurs éléments
+             ? à la suite d'un nom d'élément signifie que l'élément -->
+
+
+<cv>
+    <informations_personnelles>
+        <prenom>Houda</prenom>
+        <nom>Lkima</nom>
+        <adresse>
+            <rue>123 Rue</rue>
+            <ville>Grenoble</ville>
+            <code_postal>38000</code_postal>
+        </adresse>
+        <email>Houda_Lkima@icloud.com</email>
+        <telephone>00 00 00 00 00</telephone>
+        <permis>B</permis>
+    </informations_personnelles>
+    <formations>
+        <formation>
+            <diplome>Master 1 MIASHS Informatique et Cognition</diplome>
+            <etablissement>&uga; , Grenoble</etablissement>
+            <periode>2023 - Aujourd'hui</periode>
+        </formation>
+        <formation>
+            <diplome>Licence 3 de MIASHS (Mathématiques et informatique appliquées aux sciences humaines et sociales)
+            </diplome>
+            <etablissement>&uga;, Grenoble</etablissement>
+            <periode>2022 - 2023</periode>
+        </formation>
+        <formation>
+            <diplome>DUT informatique</diplome>
+            <etablissement>IUT 2 de Grenoble</etablissement>
+            <periode>2020 - 2022</periode>
+        </formation>
+        <formation>
+            <diplome>Licence 1 Mathématiques et informatique appliquées International</diplome>
+            <etablissement>&uga;, Grenoble</etablissement>
+            <periode>2022 - 2023</periode>
+        </formation>
+    </formations>
+    <experience_professionnelle>
+        <emploi>
+            <poste>Employée commerciale/Hôtesse de caisse</poste>
+            <entreprise>Intermarché - Saint Simeon de Bressieux</entreprise>
+            <periode>FÉVRIER 2023 - AUJOURD'HUI</periode>
+            <responsabilites>
+                <item>Caisse : traitement des transactions</item>
+                <item>Réception des livraisons et mise en rayon</item>
+                <item>Relation clientèle</item>
+            </responsabilites>
+        </emploi>
+        <emploi>
+            <poste>Stage en DevOps</poste>
+            <entreprise>FEESH, Chêne-Bourg, Suisse</entreprise>
+            <periode>MAI 2022 - JUILLET 2022</periode>
+            <responsabilites>
+                <item>Mise en œuvre de la plate-forme Tuleap pour la gestion du cycle de vie des applications</item>
+                <item>Étude et comparaison des solutions de gestion de projet et ALM</item>
+                <item>Déploiement de la solution Tuleap sur le cloud avec Kubernetes</item>
+                <item>Mise en œuvre et mise en production de la solution (monitoring, backup, performance)</item>
+            </responsabilites>
+        </emploi>
+        <emploi>
+            <poste>Trésorière adjointe</poste>
+            <entreprise>Association Fauré - Saint Martin d'Hères</entreprise>
+            <periode>OCTOBRE 2019 - JUIN 2020</periode>
+            <responsabilites>
+                <item>Financement, collecte de fonds et ventes</item>
+                <item>Planification financière et budgétisation</item>
+                <item>Opérations bancaires, contrôle de registres</item>
+            </responsabilites>
+        </emploi>
+        <emploi>
+            <poste>Bénévole au Secours Populaire</poste>
+            <entreprise>Secours Populaire, La Côte Saint André</entreprise>
+            <periode>OCTOBRE 2018 - AUJOURD'HUI</periode>
+            <responsabilites>
+                <item>Collecte de fonds, de nourriture ou de vêtements</item>
+                <item>Accueil et accompagnement des personnes en difficulté</item>
+                <item>Organisation des interventions ponctuelles et actions de proximité</item>
+            </responsabilites>
+        </emploi>
+    </experience_professionnelle>
+    <competences>
+        <informatique>
+            <outils_integration_et_deploiement_continu>
+                <outil>CitLab</outil>
+                <outil>Docker</outil>
+                <outil>Kubernetes</outil>
+            </outils_integration_et_deploiement_continu>
+            <langages_et_frameworks>
+                <langage>HTML 5</langage>
+                <langage>CSS</langage>
+                <langage>jQuery</langage>
+                <langage>Javascript</langage>
+                <langage>Bootstrap</langage>
+                <langage>PHP</langage>
+                <langage>Python</langage>
+                <langage>PostgreSQL</langage>
+                <langage>Java</langage>
+                <langage>C++</langage>
+                <langage>ADA</langage>
+            </langages_et_frameworks>
+            <gestion_de_projet>JIRA, Tuleap</gestion_de_projet>
+        </informatique>
+        <personnelles>
+            <competence>Capacité d'adaptation</competence>
+            <competence>Sérieux</competence>
+            <competence>Curiosité</competence>
+        </personnelles>
+    </competences>
+    <langues>
+        <langue>
+            <nom>Français</nom>
+            <niveau>C2 (Langue maternelle)</niveau>
+        </langue>
+        <langue>
+            <nom>Anglais</nom>
+            <niveau>C1 (Avancé)</niveau>
+        </langue>
+        <langue>
+            <nom>Italien</nom>
+            <niveau>B2 (Intermédiaire avancé)</niveau>
+        </langue>
+        <langue>
+            <nom>Espagnol</nom>
+            <niveau>B1 (Intermédiaire)</niveau>
+        </langue>
+    </langues>
+</cv>

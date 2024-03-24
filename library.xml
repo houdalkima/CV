@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library location="Bremen">
+  <author name="Henry Wise">
+  	<book title="Artificial Intelligence"/>
+  	<book title="Modern Web Service"/>
+  	<book title="Theory of Computation"/>
+  </author>
+  <author name="William Smart">
+    <book title="Artificial Intelligence"/>
+  </author>
+  <author name="Cynthia Singleton">
+  	<book title="The Semantic Web"/>
+  	<book title="Browser Technology Revised"/>
+  </author>
+</library>
+
+
+        <!--
+ xmllint --xpath child::library/child::author library.xml
+ xmllint --xpath /library/@location library.xml
+  xmllint --xpath "//book[@title = 'Artificial Intelligence']" library.xml
+         -->

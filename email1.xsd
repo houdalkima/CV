@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+  
+  <xsd:element name="email" type="emailType"/>
+
+  <xsd:complexType name="emailType">
+    <xsd:sequence>
+      <xsd:element name="head" type="headType"/>
+      <xsd:element name="body" type="bodyType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="headType">
+    <xsd:sequence>
+      <xsd:element name="from" type="nameAddress"/> 
+      <xsd:element name="to" type="nameAddress" maxOccurs="unbounded"/>
+      <xsd:element name="cc" type="nameAddress" minOccurs="0" maxOccurs="unbounded"/> 
+      <xsd:element name="bcc" type="nameAddress" minOccurs="0" maxOccurs="unbounded"/> 
+      <xsd:element name="subject" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="nameAddress">
+    <xsd:attribute name="name" type="xsd:string" use="optional"/>
+    <xsd:attribute name="address" type="xsd:string" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="bodyType"> 
+    <xsd:sequence>
+      
+      <xsd:element name="text" type="xsd:string"/> 
+      
+      <xsd:element name="attachment" minOccurs="0" maxOccurs="unbounded"> 
+        <xsd:complexType>
+          
+          <xsd:attribute name="encoding" use="optional" default="mime">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="mime"/>
+                <xsd:enumeration value="binhex"/> 
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:attribute>
+          
+          <xsd:attribute name="file" type="xsd:string" use="required"/> 
+        
+        </xsd:complexType>
+      </xsd:element>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv>
+    <civilite titre="M.">
+        <nom>Dunord</nom>
+        <prenom>Edgard</prenom>
+        <etat-civil>célibataire</etat-civil>
+        <date-de-naissance>1997-02-15</date-de-naissance>
+        <adresse>
+            <rue>3 rue du validateur</rue>
+            <code-postal>38000</code-postal>
+            <ville>Grenoble</ville>
+        </adresse>
+        <telephone type="fixe">0400000000</telephone>
+        <telephone type="portable">0600000000</telephone>
+        <e-mail>edgard.dunord@uga-grenoble-alpes.fr</e-mail>
+        <web>http://edgard.dunord.org</web>
+        <photo path="photo.jpg"/>
+    </civilite>
+    <poste>Développeur XML</poste>
+    <formations>
+        <formation date-debut="2015" date-fin="2018">
+            <titre>Licence MIASHS</titre>
+            <description>La licence MIASHS de l'UGA</description>
+            <organisation>Université Grenoble Alpes</organisation>
+            <localisation>Grenoble, France</localisation>
+        </formation>
+        <formation date-debut="2018" date-fin="2020">
+            <titre>Master IC</titre>
+            <description>
+                Le master IC de l'UGA qui forme au développement web
+            </description>
+            <organisation>Université Grenoble Alpes</organisation>
+            <localisation>Grenoble, France</localisation>
+        </formation>
+    </formations>
+    <experiences>
+        <experience date-debut="2018" date-fin="2019" duree="6 mois">
+            <titre>Projet tuteuré en laboratoire</titre>
+            <description>
+                Le projet à consisté à mettre en place un système d'annotation sémantique sous fome d'application web
+            </description>
+            <organisation>Laboratoire d'Informatique de Grenoble</organisation>
+            <localisation>Grenoble, France</localisation>
+            <technologies>
+                <technologie type="langage">html</technologie>
+                <technologie type="langage">css</technologie>
+                <technologie type="langage">javascript</technologie>
+                <technologie type="langage">php</technologie>
+            </technologies>
+        </experience>
+        <experience date-debut="2019" date-fin="2020" duree="6 mois">
+            <titre>Développeur/concepteur JavaEE</titre>
+            <description>
+                Analyse technique et développement d'un catalogue et boutique en ligne
+            </description>
+            <organisation>devweb company</organisation>
+            <localisation>Grenoble, France</localisation>
+            <technologies>
+                <technologie type="langage">html</technologie>
+                <technologie type="langage">css</technologie>
+                <technologie type="langage">javascript</technologie>
+                <technologie type="langage">java</technologie>
+                <technologie type="environnement">struts</technologie>
+                <technologie type="environnement">JavaEE</technologie>
+            </technologies>
+        </experience>
+    </experiences>
+    <centres-d-interet>
+        <centre-d-interet>
+            <titre>trecking</titre>
+            <description>
+                Participation à différents trails (ultra trail du mont blanc, la pierra menta, etc.
+            </description>
+        </centre-d-interet>
+        <centre-d-interet>
+            <titre>photographie</titre>
+            <description>Photographie de l'écologie alpine</description>
+        </centre-d-interet>
+    </centres-d-interet>
+</cv>
